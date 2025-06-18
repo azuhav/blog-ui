@@ -1,0 +1,20 @@
+# Use the base Nginx image that you were using
+FROM nginx:stable-alpine
+
+# Copy your main Nginx configuration file into the image
+# This assumes nginx.conf is in the same directory as this Dockerfile.nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy the options-ssl-nginx.conf file into the image
+# This assumes options-ssl-nginx.conf is in the same directory
+COPY options-ssl-nginx.conf /etc/letsencrypt/options-ssl-nginx.conf
+
+# Copy the ssl-dhparams.pem file into the image
+# This assumes ssl-dhparams.pem is in the same directory
+COPY ssl-dhparams.pem /etc/letsencrypt/ssl-dhparams.pem
+
+# Expose ports (optional, for documentation purposes)
+EXPOSE 80 443
+
+# Start Nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
