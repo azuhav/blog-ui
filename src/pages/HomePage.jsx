@@ -1,6 +1,5 @@
 import BlogList from "../components/BlogList";
 import ImageSwitcher from "../components/ImageSwitcher";
-import "./HomePage.css";
 
 function HomePage() {
   return (

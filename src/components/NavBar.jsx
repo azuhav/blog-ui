@@ -4,7 +4,6 @@ import { faHome, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAuth } from "./AuthContext";
 import SearchForm from "./SearchForm";
-import "./Navbar.css";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);

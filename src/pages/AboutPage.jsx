@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import "./AboutPage.css";
 
 import resumePDF from "../assets/resume.pdf";
 
